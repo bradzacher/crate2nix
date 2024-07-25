@@ -3,8 +3,7 @@
 #   "generate" "-n" "../nix/nixpkgs.nix" "-f" "./crate2nix/Cargo.toml" "-o" "./crate2nix/Cargo.nix"
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ nixpkgs ? ../nix/nixpkgs.nix
-, pkgs ? import nixpkgs { config = {}; }
+{ pkgs
 , lib ? pkgs.lib
 , stdenv ? pkgs.stdenv
 , buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
