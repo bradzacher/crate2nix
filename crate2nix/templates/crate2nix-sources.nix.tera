@@ -11,8 +11,7 @@
 #
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ nixpkgs ? <nixpkgs>
-, pkgs ? import nixpkgs {}
+{ pkgs ? import nixpkgs {}
 , lib ? pkgs.lib
 # The path to crate2nix.json.
 , crate2nixJson ? ./crate2nix.json
