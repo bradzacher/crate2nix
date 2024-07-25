@@ -5,8 +5,7 @@
 #  {% for arg in info.crate2nix_arguments %} {{arg}}{% endfor %}
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ nixpkgs ? {{config.nixpkgs_path | safe}}
-, pkgs ? import nixpkgs { config = {}; }
+{ pkgs
 , lib ? pkgs.lib
 , stdenv ? pkgs.stdenv
 , buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
