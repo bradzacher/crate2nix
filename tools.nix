@@ -5,7 +5,7 @@
 # avoid breaking the API and/or mention breakages in the CHANGELOG.
 #
 
-{ pkgs ? import ./nix/nixpkgs.nix { config = { }; }
+{ pkgs
 , lib ? pkgs.lib
 , stdenv ? pkgs.stdenv
 , strictDeprecation ? true
