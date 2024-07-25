@@ -11,7 +11,7 @@
 , strictDeprecation ? true
 }:
 let
-  cargoNix = pkgs.callPackage ./crate2nix/Cargo.nix { inherit strictDeprecation; };
+  cargoNix = pkgs.callPackage ./crate2nix/Cargo.nix { inherit strictDeprecation pkgs stdenv; };
   crate2nix = cargoNix.rootCrate.build;
 in
 rec {
